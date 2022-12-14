@@ -1892,7 +1892,7 @@ input, select, textarea {
 		input[type="button"]:active,
 		button:active,
 		.button:active {
-			background-color: rgba(73, 252, 212, 0.25);
+			background-color: rgb(193, 229, 243);
 			box-shadow: inset 0 0 0 2px #c1e5f3;
 			color: #c1e5f3 !important;
 		}
@@ -1961,7 +1961,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #49fcd4;
+			background-color: rgba(193, 229, 243);
 			box-shadow: none;
 			color: #000000 !important;
 		}
