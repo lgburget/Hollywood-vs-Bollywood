@@ -95,9 +95,14 @@
 										<style>
 											iframe[iframetag] {
 												border: none;
-												width: 3000px;
-												height: 3000px;
+												width: 1000px;
+												height: 1000px;
 												zoom: 0.5;
+											}
+											@media screen and (-webkit-min-device-pixel-ratio:0) {
+												#scaled-frame {
+												zoom: 0.5;
+												}
 											}
 										</style>
 										<body>
