@@ -60,9 +60,7 @@
             <div class="row s-header__navigation">
 
                 <nav class="s-header__nav-wrap">
-    
-                    <h3 class="s-header__nav-heading">Navigate to</h3>
-    
+        
                     <ul class="s-header__nav">
                         <li class="current-menu-item"><a href="index.html" title="">Home</a></li>
                         <li><a href="styles.html" title="">Styles</a></li>
@@ -164,68 +162,48 @@
 								</p>
 
 								<h2> Results of the LDA</h2>
-
-								<style>
-									iframe[iframetag] {
-										border: none;
-										width: 100%;
-										height: 1000px;
-										align-self: center;
-									}
-								</style>
-								<body>
-									<div id="iframeDiv">
-										<iframe src="lda.html" id = "target" iframetag></iframe>
-											<script>
-												let iframe = document.querySelector("#child-iframe");
-		
-												iframe.addEventListener('load', function() {
-													iframe.style.height = iframe.contentDocument.body.scrollHeight + 'px';
-													iframe.style.width = iframe.contentDocument.body.scrollWidth + 'px';
-												});	
-											</script>
-									</div>
-								</body>
+								
+								<figure class="alignwide">
+									<style>
+										iframe[iframetag] {
+											border: none;
+											width: 100%;
+											height: 800px;
+											align-self: center;
+										}
+									</style>
+									<body>
+										<div id="iframeDiv">
+											<iframe src="lda.html" id = "target" iframetag></iframe>
+												<script>
+													let iframe = document.querySelector("#child-iframe");
+			
+													iframe.addEventListener('load', function() {
+														iframe.style.height = iframe.contentDocument.body.scrollHeight + 'px';
+														iframe.style.width = iframe.contentDocument.body.scrollWidth + 'px';
+													});	
+												</script>
+										</div>
+									</body>
+								</figure>
 
 								<p>
 								We can also visualize the proportion of each movie industry inside of the topics we found with the LDA
 								</p>
 								
-								<div>                            
-									<div id="e4c8cbb5-4a6e-44bc-a2fd-9dcadec3fbd1" class="plotly-graph-div" style="height:100%; width:100%;"></div>            
-										<script type="text/javascript">      
-											window.PLOTLYENV=window.PLOTLYENV || {};                                   
-											if (document.getElementById("e4c8cbb5-4a6e-44bc-a2fd-9dcadec3fbd1")) {                    
-												Plotly.newPlot(                        
-													"e4c8cbb5-4a6e-44bc-a2fd-9dcadec3fbd1",                        
-													[{"alignmentgroup":"True",
-													"error_y":{"array":[0.011719821089651972,0.009793624050219163,0.0001940334906479921,0.0007725738236070999,3.1825768853131254e-05,0.000585786871740782,0.007568948749845789,0.006792973283586606,0.005530486937326495,0.004065235355302933,0.0029732696657815277,0.0016932295328912009,0.0010832764769511387,0.0007382599371330388]},
-													"hovertemplate":"country=american<br>topic=%{x}<br>mean=%{y}<extra></extra>",
-													"legendgroup":"american",
-													"marker":{"color":"#636efa","pattern":{"shape":""}},
-													"name":"american",
-													"offsetgroup":"american",
-													"orientation":"v",
-													"showlegend":true,
-													"textposition":"auto",
-													"x":["topic_0","topic_1","topic_10","topic_11","topic_12","topic_13","topic_2","topic_3","topic_4","topic_5","topic_6","topic_7","topic_8","topic_9"],
-													"xaxis":"x",
-													"y":[0.24589631864265343,0.21235283540186708,0.0002855328388869873,0.0005624855184093955,6.152684274206901e-05,0.0005308746853720773,0.1833336322103283,0.14159867424657654,0.09566397454791345,0.05557768613848222,0.029937150053526394,0.012426025164543674,0.00425781292522551,0.0013914721982814626],
-													"yaxis":"y",
-													"type":"bar"
-												},
-													{"alignmentgroup":"True","error_y":{"array":[0.017255569684123506,0.013406336794507506,0.0001342558611585061,0.00013425596682993182,0.00013425569644158637,0.00013425569704823332,0.011415529829352344,0.011759199220199704,0.010822775364722498,0.009162785981571227,0.004720768613034492,0.002215602253800761,0.001141315259278262,0.0014148955552577619]},"hovertemplate":"country=indian<br>topic=%{x}<br>mean=%{y}<extra></extra>","legendgroup":"indian","marker":{"color":"#EF553B","pattern":{"shape":""}},"name":"indian","offsetgroup":"indian","orientation":"v","showlegend":true,"textposition":"auto","x":["topic_0","topic_1","topic_10","topic_11","topic_12","topic_13","topic_2","topic_3","topic_4","topic_5","topic_6","topic_7","topic_8","topic_9"],"xaxis":"x","y":[0.34912429842355336,0.23579715756699557,0.0002754760907661028,0.00027547624510250907,0.00027547568506893416,0.0002754757242381611,0.14502202109519927,0.10877104359772709,0.07256888641911206,0.0446060786808553,0.01762333257523696,0.0062258860319086475,0.0018965459952646488,0.0014718487734463072],"yaxis":"y","type":"bar"}],                        
-													{"barmode":"group","legend":{"title":{"text":"country"},"tracegroupgap":0},"margin":{"t":60},"template":{"data":{"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}},"xaxis":{"anchor":"y","categoryarray":["topic_0","topic_1","topic_2","topic_3","topic_4","topic_5","topic_6","topic_7","topic_8","topic_9"],"categoryorder":"array","domain":[0.0,1.0],"title":{"text":"topic"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"mean"}}},                        
-													{"responsive": true}                    
-											)               
-										};                            
-									</script>        
-								</div>
 			
 								<figure class="alignwide">
 									<header>
 										<h3>Topics distribution between movie industries</h3>
 									</header>
+									<style>
+										iframe[iframetag] {
+											border: none;
+											width: 100%;
+											height: 100%;
+											align-self: center;
+										}
+									</style>
 									<div id="iframeDiv">
 										<iframe src="barplot.html" id = "target" iframetag></iframe>
 											<script>			
