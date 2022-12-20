@@ -196,23 +196,7 @@
 									<header>
 										<h3>Topics distribution between movie industries</h3>
 									</header>
-									<style>
-										iframe[iframetag] {
-											border: none;
-											width: 100%;
-											height: 100%;
-											align-self: center;
-										}
-									</style>
-									<div id="iframeDiv">
-										<iframe src="barplot.html" id = "target" iframetag></iframe>
-											<script>			
-												iframe.addEventListener('load', function() {
-													iframe.style.height = iframe.contentDocument.body.scrollHeight + 'px';
-													iframe.style.width = iframe.contentDocument.body.scrollWidth + 'px';
-												});	
-											</script>
-									</div>
+									<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/1.embed" height="525" width="100%"></iframe>
 								</figure>
 		
 								<p>
