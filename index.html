@@ -85,15 +85,13 @@
 										</div>
 									</div>
 								</section>
-			</div>
 					<!-- Section -->
-		<div>
-			<section>
-					<header>
-						<h3>What are the main topics in each movie industry ?</h3>
-						<p>Word cloud of topics would be cool</p>
-					</header>
-
+						</div>
+					</section>
+			</div>
+	
+			<div id="figure">
+				<section>
 						<style>
 							iframe[iframetag] {
 								border: none;
@@ -114,19 +112,25 @@
 									</script>
 							</div>
 						</body>
-			</section>
-		</div>
-<!-- Section -->
+				</section>
+			</div>
+
+			<div id="wrapper">
+ 					<!-- Section -->
 								<section>
 									<header>
-										<h3>Comvergence of cultures</h3>
-										<p>Paragraphe sur la convergence des cultures</p>
+										<h3>Ptit barplot dea familles</h3>
+										<p>Toi même tu sais</p>
 									</header>
 									<div class="content">
-										<div class="gallery">
-											<a href="images/gallery/fulls/08.jpg" class="portrait"><img src="images/gallery/thumbs/08.jpg" alt="" /></a>
-											<a href="images/gallery/fulls/09.jpg" class="portrait"><img src="images/gallery/thumbs/09.jpg" alt="" /></a>
-											<a href="images/gallery/fulls/10.jpg" class="landscape"><img src="images/gallery/thumbs/10.jpg" alt="" /></a>
+										<div id="iframeDiv">
+											<iframe src="barplot.html" id = "target" iframetag></iframe>
+												<script>			
+													iframe.addEventListener('load', function() {
+														iframe.style.height = iframe.contentDocument.body.scrollHeight + 'px';
+														iframe.style.width = iframe.contentDocument.body.scrollWidth + 'px';
+													});	
+												</script>
 										</div>
 									</div>
 								</section>
