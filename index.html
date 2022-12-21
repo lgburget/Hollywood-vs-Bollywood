@@ -125,160 +125,166 @@
 
         <!-- # site-content
         ================================================== -->
-        <div id="content" class="s-content s-content--blog">
+        <div id="content" class="s-content s-content--page">
 
 			<div class="row entry-wrap">
 				<div class="column lg-12">
 
 					<article class="entry format-standard">
 
-						<div class="content-primary">
+						<h1> Some numbers on our data </h1> 
+						<p class="lead">
+						Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor 
+						sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat 
+						enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco 
+						magna amet magna cupidatat qui labore cillum cillum cupidatat fugiat nostrud. </p> 
 
-							<div class="entry__content">
+						<p class="drop-cap">
+						Eligendi quam at quis. Sit vel neque quam consequuntur expedita quisquam. Incidunt quae 
+						qui error. Rerum non facere mollitia ut magnam laboriosam. Quisquam neque quia ex eligendi 
+						repellat illum quibusdam aut. Architecto quam consequuntur totam ratione reprehenderit est 
+						praesentium impedit maiores incididunt adipisicing veniam velit .
+						</p>
+						
+						<h2>Topic detection</h2>
+						<p>
+						Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor 
+						sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat 
+						enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco 
+						magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum 
+						adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut 
+						laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat 
+						in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
+						</p>
 
-								<h1> Some numbers on our data </h1> 
-								<p class="lead">
-								Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor 
-								sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat 
-								enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco 
-								magna amet magna cupidatat qui labore cillum cillum cupidatat fugiat nostrud. </p> 
+						<h2> Results of the LDA</h2>
+						
+						<figure class="alignwide">
+							<style>
+								iframe[iframetag] {
+									border: none;
+									width: 100%;
+									height: 800px;
+									align-self: center;
+								}
+							</style>
+							<body>
+								<div id="iframeDiv">
+									<iframe src="lda.html" id = "target" iframetag></iframe>
+										<script>
+											let iframe = document.querySelector("#child-iframe");
+	
+											iframe.addEventListener('load', function() {
+												iframe.style.height = iframe.contentDocument.body.scrollHeight + 'px';
+												iframe.style.width = iframe.contentDocument.body.scrollWidth + 'px';
+											});	
+										</script>
+								</div>
+							</body>
+						</figure>
 
-								<p class="drop-cap">
-								Eligendi quam at quis. Sit vel neque quam consequuntur expedita quisquam. Incidunt quae 
-								qui error. Rerum non facere mollitia ut magnam laboriosam. Quisquam neque quia ex eligendi 
-								repellat illum quibusdam aut. Architecto quam consequuntur totam ratione reprehenderit est 
-								praesentium impedit maiores incididunt adipisicing veniam velit .
-								</p>
-								
-								<h2>Topic detection</h2>
-								<p>
-								Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor 
-								sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat 
-								enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco 
-								magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum 
-								adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut 
-								laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat 
-								in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
-								</p>
+						<p>
+						We can also visualize the proportion of each movie industry inside of the topics we found with the LDA
+						</p>
+						
+	
+						<figure class="alignwide">
+							<header>
+								<h3>Topics distribution between movie industries</h3>
+							</header>
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/1.embed" height="525" width="100%"></iframe>
+						</figure>
 
-								<h2> Results of the LDA</h2>
-								
-								<figure class="alignwide">
-									<style>
-										iframe[iframetag] {
-											border: none;
-											width: 100%;
-											height: 800px;
-											align-self: center;
-										}
-									</style>
-									<body>
-										<div id="iframeDiv">
-											<iframe src="lda.html" id = "target" iframetag></iframe>
-												<script>
-													let iframe = document.querySelector("#child-iframe");
+						<p>
+						Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor 
+						sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat 
+						enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco 
+						magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum 
+						adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut 
+						laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat 
+						in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
+						</p>
+
+						<h2 class="entry__title"> Exploring further differences between genres: deep dive</h2>
+						<h2>Romance</h2>
+						<div class="row">
+
+							<div class="column lg-6 tab-12">
+								<h3>t-SNE results, with k-means clustering (k=5)</h3>
+								<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/5.embed" height="50%" width="50%"></iframe>
+							</div>
 			
-													iframe.addEventListener('load', function() {
-														iframe.style.height = iframe.contentDocument.body.scrollHeight + 'px';
-														iframe.style.width = iframe.contentDocument.body.scrollWidth + 'px';
-													});	
-												</script>
-										</div>
-									</body>
-								</figure>
-
-								<p>
-								We can also visualize the proportion of each movie industry inside of the topics we found with the LDA
-								</p>
-								
+							<div class="column lg-6 tab-12">
 			
-								<figure class="alignwide">
-									<header>
-										<h3>Topics distribution between movie industries</h3>
-									</header>
-									<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/1.embed" height="525" width="100%"></iframe>
-								</figure>
-		
-								<p>
-								Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor 
-								sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat 
-								enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco 
-								magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum 
-								adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut 
-								laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat 
-								in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
-								</p>
-		
-								<h2>Large Heading</h2>
-		
-								<p>
-								Harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta 
-								nobis est eligendi optio cumque nihil impedit quo minus <a href="http://#">omnis voluptas assumenda est</a> 
-								id quod maxime placeat facere possimus, omnis dolor repellendus. Temporibus autem quibusdam et 
-								aut officiis debitis aut rerum necessitatibus saepe eveniet ut et.</p>
-		
-		
-								<p>
-								Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores 
-								et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa. 
-								Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit 
-								libero, a pharetra augue laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat 
-								occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed..</p>
-		
-								<h3>Smaller Heading</h3>
-		
-								<p>
-								Quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
-								eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas 
-								assumenda est, omnis dolor repellendus.
-								</p>
-		
-								<p>
-								Quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
-								eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas 
-								assumenda est, omnis dolor repellendus.
-								</p>
-									
-										
-								<p>
-								Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et 
-								quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa.</p>
-		
+								<h3>Exploration of the difference between the clusters</h3>
+								<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/7.embed" height="50%" width="50%"></iframe>
+							</div>
+			
+						</div> <!-- end row -->
+						<p>
+						Harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta 
+						nobis est eligendi optio cumque nihil impedit quo minus <a href="http://#">omnis voluptas assumenda est</a> 
+						id quod maxime placeat facere possimus, omnis dolor repellendus. Temporibus autem quibusdam et 
+						aut officiis debitis aut rerum necessitatibus saepe eveniet ut et.</p>
+
+
+						<p>
+						Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores 
+						et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa. 
+						Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit 
+						libero, a pharetra augue laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat 
+						occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed..</p>
+
+						<h3>Smaller Heading</h3>
+
+						<p>
+						Quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
+						eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas 
+						assumenda est, omnis dolor repellendus.
+						</p>
+
+						<p>
+						Quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
+						eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas 
+						assumenda est, omnis dolor repellendus.
+						</p>
+							
+								
+						<p>
+						Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et 
+						quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa.</p>
+
+						<ul>
+							<li>Donec nulla non metus auctor fringilla.
 								<ul>
-									<li>Donec nulla non metus auctor fringilla.
-										<ul>
-											<li>Lorem ipsum dolor sit amet.</li>
-											<li>Lorem ipsum dolor sit amet.</li>
-											<li>Lorem ipsum dolor sit amet.</li>
-										</ul>
-									</li>
-									<li>Donec nulla non metus auctor fringilla.</li>
-									<li>Donec nulla non metus auctor fringilla.</li>
+									<li>Lorem ipsum dolor sit amet.</li>
+									<li>Lorem ipsum dolor sit amet.</li>
+									<li>Lorem ipsum dolor sit amet.</li>
 								</ul>
-		
-								<p>
-								Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et quas 
-								molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa. Aenean eu leo quam. 
-								Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue 
-								laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing 
-								in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
-								</p>
+							</li>
+							<li>Donec nulla non metus auctor fringilla.</li>
+							<li>Donec nulla non metus auctor fringilla.</li>
+						</ul>
 
-								<blockquote>
-									<p>
-										Indian cinema, now a $2 billion industry, has much to offer.
-										A treasure trove of stories and songs, its films are an art form that has grown to encompass every 
-										facet of the nation's culture. From the epic historical films to the glossy masala movies, 
-										from the arthouse parallel cinema to the song-and-dance spectaculars, Indian cinema has something 
-										for everyone. In fact, it is the largest and most diverse film industry in the world, and it is now finding 
-										an increasingly global audience.
-									</p>
-									<cite>Shah Rukh Khan, Indian actor and film producer</cite>
-								</blockquote>
+						<p>
+						Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et quas 
+						molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa. Aenean eu leo quam. 
+						Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue 
+						laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing 
+						in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
+						</p>
 
-							</div> <!-- end entry-content -->
-
-						</div> <!-- end content-primary -->
+						<blockquote>
+							<p>
+								Indian cinema, now a $2 billion industry, has much to offer.
+								A treasure trove of stories and songs, its films are an art form that has grown to encompass every 
+								facet of the nation's culture. From the epic historical films to the glossy masala movies, 
+								from the arthouse parallel cinema to the song-and-dance spectaculars, Indian cinema has something 
+								for everyone. In fact, it is the largest and most diverse film industry in the world, and it is now finding 
+								an increasingly global audience.
+							</p>
+							<cite>Shah Rukh Khan, Indian actor and film producer</cite>
+						</blockquote>
 
 					</article> <!-- end entry -->
 
