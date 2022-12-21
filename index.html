@@ -183,54 +183,44 @@
 
 						<h2 class="entry__header"> Exploring further differences between genres: deep dive</h2>
 					
-					</article>
-				</div>
-			</div>
 
-			<!-- Pagination buttons -->
-			<div class="row pagination">
-				<div class="column lg-12">
-					<nav class="pgn">
-						<ul>
-							<div class="pgn__num" onclick="changeIframe('https://plotly.com/~lgburget/5.embed', 'https://plotly.com/~lgburget/7.embed')">Romance</div>
-							<div class="pgn__num" onclick="changeIframe('https://plotly.com/~lgburget/15.embed', 'https://plotly.com/~lgburget/18.embed')">Horror</div>
-							<div class="pgn__num" onclick="changeIframe('https://plotly.com/~lgburget/11.embed', 'https://plotly.com/~lgburget/13.embed')">Action</div>
-						</ul>
-					</nav> <!-- end pgn -->
-				</div> <!-- end column -->
-			</div> <!-- end pagination -->
+						<!-- Pagination buttons -->
+						<div class="row pagination">
+							<div class="column lg-12">
+								<nav class="pgn">
+									<ul>
+										<div class="pgn__num" onclick="changeIframe('https://plotly.com/~lgburget/5.embed', 'https://plotly.com/~lgburget/7.embed')">Romance</div>
+										<div class="pgn__num" onclick="changeIframe('https://plotly.com/~lgburget/15.embed', 'https://plotly.com/~lgburget/18.embed')">Horror</div>
+										<div class="pgn__num" onclick="changeIframe('https://plotly.com/~lgburget/11.embed', 'https://plotly.com/~lgburget/13.embed')">Action</div>
+									</ul>
+								</nav> <!-- end pgn -->
+							</div> <!-- end column -->
+						</div> <!-- end pagination -->
 
-			<!-- Content to display -->
-			<div class="row">
-				<p>
-					<div class="column lg-6 tab-12">
-						<h3>t-SNE results, with k-means clustering (k=5)</h3>
-						<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/5.embed" height="550" width="550"></iframe>
-					</div>
-				</p>
-				<p>
-					<div class="column lg-6 tab-12">
+						<!-- Content to display -->
+						<div class="row">
+							<p>
+								<div class="column lg-6 tab-12">
+									<h3>t-SNE results, with k-means clustering (k=5)</h3>
+									<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/5.embed" height="550" width="550"></iframe>
+								</div>
+							</p>
+							<p>
+								<div class="column lg-6 tab-12">
 
-					<h3>Exploration of the difference between the clusters</h3>
-					<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/7.embed" height="550" width="550"></iframe>
-				</p>
-			</div>
-			<script>
-				// Function to change the src attribute of the iframe
-				function changeIframe(url1, url2) {
-					document.getElementById('content-iframe-1').src = url_1;
-					document.getElementById('content-iframe-2').src = url_2;
+								<h3>Exploration of the difference between the clusters</h3>
+								<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/7.embed" height="550" width="550"></iframe>
+							</p>
+						</div>
+						<script>
+							// Function to change the src attribute of the iframe
+							function changeIframe(url1, url2) {
+								document.getElementById('content-iframe-1').src = url_1;
+								document.getElementById('content-iframe-2').src = url_2;
 
-				}
-			</script>
-
-			<div class="row entry-wrap">
-				<div class="column lg-12">
-
-					<article class="entry format-standard">				
+							}
+						</script>			
 						
-			
-						</div> <!-- end row -->
 						<p>
 						Harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta 
 						nobis est eligendi optio cumque nihil impedit quo minus <a href="http://#">omnis voluptas assumenda est</a> 
