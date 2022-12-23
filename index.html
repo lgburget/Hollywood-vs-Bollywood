@@ -115,25 +115,265 @@
         <!-- # site-content
         ================================================== -->
         <div id="content" class="s-content s-content--page">
+			
 
 			<div class="row entry-wrap">
 				<div class="column lg-12">
 
 					<article class="entry format-standard">
-
-						<h1> Some numbers on our data </h1> 
-						<p class="lead">
-						Insert some stats on our dataset using cool formatting</p> 
-
-						<p class="drop-cap">
-						We start our journey by performing exploratory data analysis.
-						</p>
-
-						<p>
-						Insert actor age plot etc
-						</p>
 						
-						<h1>Topic detection</h1>
+						<h2 class="entry__title" style="text-align: center;">In 2019...</h2>
+
+						<p class="lead">
+						
+						<div class="row">
+							
+							<p>
+								<div class="column lg-6 mob-12">
+									<h6 style="text-align: center;"><strong>American movies generated...</strong></h6>
+									<p>
+										<head>
+											<title>Incrementing Number</title>
+											<style>
+												.digit {
+													position: relative;
+													animation: moveUp 3s ease;
+												}
+												.digit {
+													display: inline-block;
+													position: relative;
+													overflow: hidden;
+													width: 1em;
+													height: 1em;
+													line-height: 1em;
+													font-size: 1em;
+													animation: digit 1s ease-in-out;
+												}
+												.digit[data-value="0"] {
+													animation-delay: 0s;
+												}
+												.digit[data-value="1"] {
+													animation-delay: 0.1s;
+												}
+												.digit[data-value="2"] {
+													animation-delay: 0.2s;
+												}
+												.digit[data-value="3"] {
+													animation-delay: 0.3s;
+												}
+												.digit[data-value="4"] {
+													animation-delay: 0.4s;
+												}
+												.digit[data-value="5"] {
+													animation-delay: 0.5s;
+												}
+												.digit[data-value="6"] {
+													animation-delay: 0.6s;
+												}
+												.digit[data-value="7"] {
+													animation-delay: 0.7s;
+												}
+												.digit[data-value="8"] {
+													animation-delay: 0.8s;
+												}
+												.digit[data-value="9"] {
+													animation-delay: 0.9s;
+												}
+												.digit span {
+													position: absolute;
+													top: 0;
+													left: 0;
+													width: 1em;
+													height: 1em;
+													line-height: 1em;
+													font-size: 1em;
+												}
+												.digit span:nth-child(1) {
+													animation-delay: 0s;
+												}
+												.digit span:nth-child(2) {
+													animation-delay: 0.1s;
+												}
+												.digit span:nth-child(3) {
+													animation-delay: 0.2s;
+												}
+												.digit span:nth-child(4) {
+													animation-delay: 0.3s;
+												}
+												
+
+												@keyframes moveUp {
+													from {
+														top: 100%;
+													}
+													to {
+														top: 0;
+													}
+												}
+											</style>
+										</head>
+										<body>
+											<div id="number_1" style="font-size: xx-large; text-align: center;" >0</div>
+											<h6 style="text-align: center;"><strong>... dollars </strong></h6>
+											<script>
+												// Set the target value
+												const target = 11000000000;
+										
+												// Set the initial value
+												let current = 0;
+										
+												// Set the increment amount
+												const increment = 10000000;
+										
+												// Set the interval (in milliseconds) at which the value should be incremented
+												const interval = 14;
+										
+												// Set the timer
+												const timer = setInterval(function() {
+													// Increment the value
+													current += increment;
+										
+													// Update the displayed value
+													updateNumber(current);
+										
+													// If the target value has been reached, clear the timer
+													if (current >= target) {
+														clearInterval(timer);
+													}
+												}, interval);
+										
+												function updateNumber(value) {
+													// Get the current value
+													const currentValue = parseInt(document.getElementById("number_1").dataset.value);
+										
+													// Convert the value to a string
+													const valueString = value.toString();
+										
+													// Split the value into an array of digits
+													const valueDigits = valueString.split("");
+										
+													// Update the HTML to match the new value
+													let html = "";
+													for (let i = 0; i < valueDigits.length; i++) {
+														const digit = valueDigits[i];
+														if (digit !== currentValue[i]) {
+															html += `<span class="digit" data-value="${digit}" style="animation-delay: ${i * 0.1}s">${digit}</span>`;
+														} else {
+															html += `<span class="digit" data-value="${digit}">${digit}</span>`;
+														}
+													}
+													document.getElementById("number_1").innerHTML = html;
+													document.getElementById("number_1").dataset.value = value;
+												}
+											</script>
+										</body>
+									</p>
+
+								</div>
+								<div class="column lg-6 mob-12">
+									<h6 style="text-align: center;"><strong>... and the Indian movie industry produced</strong></h6>
+									<p>
+
+												
+										<body>
+											<div id="number_2" style="font-size: xx-large; text-align: center;" >0</div>
+											<h6 style="text-align: center;"><strong>... films </strong></h6>
+											<script>
+												// Set the target value
+												const target_2 = 2446;
+										
+												// Set the initial value
+												let current_2 = 0;
+										
+												// Set the increment amount
+												const increment_2 = 1;
+										
+												// Set the interval (in milliseconds) at which the value should be incremented
+												const interval_2 = 1;
+										
+												// Set the timer
+												const timer_2 = setInterval(function() {
+													// Increment the value
+													current_2 += increment_2;
+										
+													// Update the displayed value
+													updateNumber_2(current_2);
+										
+													// If the target value has been reached, clear the timer
+													if (current_2 >= target_2) {
+														clearInterval(timer_2);
+													}
+												}, interval_2);
+										
+												function updateNumber_2(value) {
+													// Get the current value
+													const currentValue = parseInt(document.getElementById("number_2").dataset.value);
+										
+													// Convert the value to a string
+													const valueString = value.toString();
+										
+													// Split the value into an array of digits
+													const valueDigits = valueString.split("");
+										
+													// Update the HTML to match the new value
+													let html = "";
+													for (let i = 0; i < valueDigits.length; i++) {
+														const digit = valueDigits[i];
+														if (digit !== currentValue[i]) {
+															html += `<span class="digit" data-value="${digit}" style="animation-delay: ${i * 0.1}s">${digit}</span>`;
+														} else {
+															html += `<span class="digit" data-value="${digit}">${digit}</span>`;
+														}
+													}
+													document.getElementById("number_2").innerHTML = html;
+													document.getElementById("number_2").dataset.value = value;
+												}
+											</script>
+										</body>
+									</p>
+
+								</div>
+							</p>
+						</div>
+
+						<p class="drop-cap" style="font-size: larger;">
+							Bollywood and Hollywood are very famous film industries nowadays. A westerner might assumes 
+							that Bollywood has a long way to go before having the same importance in term of production, 
+							compared to the American industry. When we look at some numbers, the Indian movie industry is 
+							extremely famous in India, which has more than 1.4 billion people (more than 1/8 of the population 
+							on Earth !). The Indian film industry’s export to other countries is also growing, notably in 
+							China, and its productions have appeared in occidental cinemas more and more in recent years. 
+							Therefore, it could be interesting to deconstruct this bias and ask ourselves : what assumptions 
+							we have as westerners?
+						</p>
+						<p style="text-align: center;">
+							<strong>For example, what comes to your mind when I talk about Indian cinema?</strong>
+							<br>
+								<em style="text-align: center;">Drama?</em>
+								<em style="text-align: center;">Singing?</em>
+								<em style="text-align: center;">Dancing?</em>
+								<em style="text-align: center;">Romantic?</em>
+								<em style="text-align: center;">Foreign?</em>
+							</br>
+						</p>
+							Unlike Hollywood, <strong>Bollywood is not a real place</strong>, but only a contraction 
+							of Hollywood, the term representing the place of reference for American cinema, and Bombay, 
+							the capital of India (now Mumbai) but also the historical base of Indian cinema. The association 
+							between these two industries may lead one to believe that Indian cinema is strongly influenced by 
+							American cinema. Thus, in this project we will look at the features of their films and analyze the 
+							similarities and differences between these two world famous film factories. 
+						</p>
+						<p style="font-size: larger; text-align: center;">
+							<strong>Indian films impregnated by American production or do they have their own completely different identity?</strong> 
+						</p>
+
+						<h1 class="entry__header">Getting familiar with the data</h1>
+
+						<h2></h2>
+
+
+
+						<h1 class="entry__header">Topic detection</h1>
 
 						<h2> Results of the LDA</h2>
 						<figure class="alignwide">
@@ -377,45 +617,43 @@
 
 						<div class="row">
 							<div class="column lg-12">
-								<strong>You will find many examples by navigating through this plot. We will detail one of them here</strong>
+								<p style="font-size: larger; text-align: center;"><strong>You will find many examples by navigating through this plot. We will detail one of them here</strong></p>
 
 								<p>	
-								Let's take the genre '<em><strong>romance</strong></em>'. The K-Means algorithm find 5 clusters. We can observe on the right panel by selecting 
-								'Countries' that in the <strong style = "color: rgb(211, 180, 42);">cluster 4</strong>, that <strong>Indian movies are largely over-represented</strong>. On the 
-								other hand, for the <strong style = "color: rgb(78, 85, 113);">cluster 3</strong>, in grey, it's the <strong>American movies that are largely over-represented</strong>.
+								Let's take the genre '<em><strong>comedy</strong></em>'. The K-Means algorithm was set to 4 clusters. We can observe on the right panel by selecting 
+								<strong><u>Countries</u></strong> that in the <strong style = "color: rgb(204, 79, 21);">cluster 1</strong>, that <strong>Indian movies</strong> are largely over-represented. On the 
+								other hand, for the <strong style = "color: rgb(59, 150, 57);">cluster 2</strong>, it's the <strong>American movies</strong> that are largely over-represented.
 								</p>
 					
-								<strong>Now let's focus on the standardized topic prevalence</strong>
+								<p style="text-align: center; font-size: larger;">
+									<strong>Now let's focus on the standardized topic prevalence.</strong> 
+									<br style="font-size: smaller;"><em style="font-size: smaller;">(You can access topic differences by clicking on the box with the downward arrow on the top left of the right-side plot and selecting)</em></br>
+								</p>
 								
 								<p>
-								We first see that the topic concerning women and
-								relationship has a much higher prevalence in <strong style = "color: rgb(78, 85, 113);">cluster 3</strong> than in 
-								<strong style = "color: rgb(211, 180, 42);">cluster 4</strong> although it
-								remains important in the latter. 
+									The most important topic in the <strong style = "color: rgb(204, 79, 21);">cluster 1</strong>is the topic centered on family and daily life whereas in the 
+									<strong style = "color: rgb(59, 150, 57);">cluster 2</strong> this topic doesn't seem to be more covered than the average. Moreover we see that in 
+									<strong style = "color: rgb(59, 150, 57);">cluster 2</strong> the most important topic is about ships, aliens and discoveries, and in <strong style = "color: rgb(204, 79, 21);">cluster 1</strong> this topic is much 
+									less present than on average (negative mean normalized topic prevalence). 
 								</p>
 								<p>
-								Secondly, we can see that the topic containing the words '<strong>father</strong>',
-								and '<strong>mother</strong>' have a negative standardized prevalence in the <strong style ="color: rgb(78, 85, 113);">cluster 3</strong> whereas in  
-								<strong style = "color: rgb(211, 180, 42);">cluster 4</strong> we have positive values. This indicates that there exists a sub-genre of romance 
-								mainly present in India where the mother- and father-related topics are important. 
-								</p>
-
-								<p>
-								Interestingly, <strong style = "color: rgb(139, 56, 114);">cluster 5</strong> has a negative standardized prevalence score
-								in the topic related to women and relationships, and a positive score in the topic concerning escapes, shooting and trucks. This subgenre
-								of <strong>romance</strong> movies is also proportionally more present in Indian cinema.
+									We can deduce from this analysis that in India, more comedies are made
+									involving a family's daily life and very rarely add a sci-fi/adventure component.in the US, comedies mixed with some action seem to be very frequent. However, it is also important 
+									to notice that there are also other clusters, or sub-genres, that are represented equally in both 
+									countries like <strong style = "color: rgb(168, 58, 135);">cluster 0</strong> or <strong style = "color: rgb(78, 85, 113);">cluster 3</strong>. 
+									<strong>This shows that there are some sub-genres that are equally represented in India and the US.</strong>
 								</p>
 								<p>
-								It is also important to notice that there are  
-								clusters, or sub-genres, that are represented more equally in both countries or with only a 
-								slight dominance of one country like <strong style = "color: rgb(211, 81, 42);">cluster 1</strong>, 
-								<strong style = "color: rgb(59, 150, 57);">cluster 2</strong> or <strong style = "color: rgb(139, 56, 114);">cluster 5</strong>. 
-								This shows that there are still some Indian and American romance that share a lot of features.
-								</p>
+									We can also notice than when investigating the differences in the <strong><u>Actor</u></strong> visualization
+									 between <strong style = "color: rgb(204, 79, 21);">cluster 1</strong>
+									and <strong style = "color: rgb(59, 150, 57);">cluster 2</strong>, women happen to represent a smaller proportion of
+									the cast in the <strong style = "color: rgb(59, 150, 57);">cluster 2</strong> than in the <strong style = "color: rgb(204, 79, 21);">cluster 1</strong>.
+								</p>								
 							</div>
 						</div>
-		
 						
+						
+		
 						<h1><strong>Conclusion</strong></h1>
 						<p> 
 						Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et quas 
