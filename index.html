@@ -151,57 +151,6 @@
 													font-size: 1em;
 													animation: digit 1s ease-in-out;
 												}
-												.digit[data-value="0"] {
-													animation-delay: 0s;
-												}
-												.digit[data-value="1"] {
-													animation-delay: 0.1s;
-												}
-												.digit[data-value="2"] {
-													animation-delay: 0.2s;
-												}
-												.digit[data-value="3"] {
-													animation-delay: 0.3s;
-												}
-												.digit[data-value="4"] {
-													animation-delay: 0.4s;
-												}
-												.digit[data-value="5"] {
-													animation-delay: 0.5s;
-												}
-												.digit[data-value="6"] {
-													animation-delay: 0.6s;
-												}
-												.digit[data-value="7"] {
-													animation-delay: 0.7s;
-												}
-												.digit[data-value="8"] {
-													animation-delay: 0.8s;
-												}
-												.digit[data-value="9"] {
-													animation-delay: 0.9s;
-												}
-												.digit span {
-													position: absolute;
-													top: 0;
-													left: 0;
-													width: 1em;
-													height: 1em;
-													line-height: 1em;
-													font-size: 1em;
-												}
-												.digit span:nth-child(1) {
-													animation-delay: 0s;
-												}
-												.digit span:nth-child(2) {
-													animation-delay: 0.1s;
-												}
-												.digit span:nth-child(3) {
-													animation-delay: 0.2s;
-												}
-												.digit span:nth-child(4) {
-													animation-delay: 0.3s;
-												}
 												
 
 												@keyframes moveUp {
@@ -216,19 +165,19 @@
 										</head>
 										<body>
 											<div id="number_1" style="font-size: xx-large; text-align: center;" >0</div>
-											<h6 style="text-align: center;"><strong>... dollars </strong></h6>
+											<h6 style="text-align: center;"><strong>... dollars</strong><a href = "https://variety.com/2020/film/box-office/box-office-us-misses-record-disney-dominates-1203453752/"> (source)</a></h6>
 											<script>
 												// Set the target value
-												const target = 11000000000;
+												const target = 42500000000;
 										
 												// Set the initial value
 												let current = 0;
 										
 												// Set the increment amount
-												const increment = 10000000;
+												const increment = 20000000;
 										
 												// Set the interval (in milliseconds) at which the value should be incremented
-												const interval = 14;
+												const interval = 7;
 										
 												// Set the timer
 												const timer = setInterval(function() {
@@ -277,7 +226,7 @@
 									<p>		
 										<body>
 											<div id="number_2" style="font-size: xx-large; text-align: center;" >0</div>
-											<h6 style="text-align: center;"><strong>... films </strong></h6>
+											<h6 style="text-align: center;"><strong>... films</strong><a href = "https://web.archive.org/web/20200413030711/http://www.filmfed.org/downloads/Language-wise-Region-2018-19-26062019.pdf"> (source)</a></h6>
 											<script>
 												// Set the target value
 												const target_2 = 2446;
@@ -342,7 +291,7 @@
 							that Bollywood has a long way to go before having the same importance in term of production, 
 							compared to the American industry. When we look at some numbers, the Indian movie industry is 
 							extremely famous in India, which has more than 1.4 billion people (more than 1/8 of the population 
-							on Earth !). The Indian film industry’s export to other countries is also growing, notably in 
+							on Earth ! <a href = "https://www.unfpa.org/data/world-population/IN">(source)</a>). The Indian film industry’s export to other countries is also growing, notably in 
 							China, and its productions have appeared in occidental cinemas more and more in recent years. 
 							Therefore, it could be interesting to deconstruct this bias and ask ourselves : what assumptions 
 							we have as westerners?
@@ -382,7 +331,6 @@
 
 					
 						<h1 class="entry__header"><strong>Getting familiar with the data</strong></h1>
-
 						<h1 style="text-align: center;">Movie genres</h1>
 						<figure>
 							<img src="images/plots/movie_genres.png" sizes="(max-width: 1000px) 100vw, 1000px" alt="">
@@ -462,6 +410,46 @@
 							Bollywood movies, in particular, which are known for their elaborate storylines 
 							and large casts. American movies, on the other hand, may be more focused on 
 							action and special effects, which may not require as much screen time. 
+						</p>
+						
+						<h1 style="text-align: center;">Lexicon</h1>
+						<div class="row">
+							<div class="column lg-6 mob-12">
+								<h2 style="text-align: center;">Indian movies</h2>
+								<figure>
+									<img src="images/plots/word_cloud_india.png" sizes="(max-width: 1000px) 100vw, 1000px" alt="">
+								</figure>
+							</div>
+							<div class="column lg-6 mob-12">
+								<h2 style="text-align: center;">American movies</h2>
+								<figure>
+									<img src="images/plots/word_cloud_america.png" sizes="(max-width: 1000px) 100vw, 1000px" alt="">
+								</figure>
+							</div>
+						</div>
+						<p style="text-align: justify;">
+							These wordcloud represent the prevalence of words in the movie plots for Indian an 
+							American movies respectively. The size of a word is proportional to its frequency in the 
+							movie summaries.
+						</p>
+						<p style="text-align: justify;">
+							We notice that the words <em>family</em>, <em>love</em>, <em>father</em> occur a lot more 
+							often in Indian movies compared to American ones. This might be the reflection of underlying cultural 
+							differences, but concluding anything is not appropriate at this level of the analysis.
+							 It is also suprising to see that the word <em>woman</em> 
+							is more important than the word <em>girl</em> in the US whereas it is the opposite in India. 
+						</p>
+						<p style="text-align: justify;">
+							This can maybe be put in perspective with what we observed in the previous section : 
+							the mean female actor age in American-dominated cluster of romantic movies is 33 years 
+							old whereas it is 27 years old in Indian-dominated clusters (6 years gap!). Moreover,
+							the topics of family and marriage is also much more important in Indian romance than
+							Americans.
+						</p>
+						<p style="text-align: justify;">
+							Although this representation gives us a good idea of the differences between the 
+							subjects covered by the two industries, it stay shallow and doesn't give us informations 
+							about the context or the type of movie those words appear in.
 						</p>
 
 
@@ -557,7 +545,7 @@
 						<p style="text-align: center;">
 							<em>
 								<small style="text-align: justify">
-									Indian is a country with more than a dozen languages talked! Silent films brought
+									India is a country with more than a dozen languages talked! Silent films brought
 									 all audiences together! But when Indian cinema
 									entered the sound era, the use of music and dance became a way to homogenise 
 									the national market across linguistic divides!
@@ -643,6 +631,71 @@
 								This is why our next step is to explore the <stong>differences between the topics</stong> in each movie industry.
 							</p>
 						</p>
+
+						<p>
+							<h2>Labeling topics</h2>
+							<p>
+								<strong> Let us identify the topics and label them</strong>. To do that, we have observed 
+								 every topic bubble and identified the keywords that made the most sense 
+								 to describe the topic.
+							</p>
+							<p>
+								This enable us to label in a specific manner each topic and not 
+								to give a general genre, since we already have that in our features. 
+								It was difficult to pinpoint a specific theme since movies' stories 
+								can be very broad and unique, so we decided to chose the keywords as 
+								the most relevant terms to describe the topics.
+							</p>
+							<p  id="LDA">
+								<strong>
+									If at any point you need a refresher as to what each topic is about, you can click on the <strong>blue square</strong> to the bottom right of your screen
+								</strong>
+							</p>
+
+							<p>
+								<strong>
+									We therefore came up with a small description for each topics:
+								</strong>
+							</p>
+							<ul style="text-align: justify;">
+								<li>
+									<strong>Topic 1</strong>: We chose "experiment, scientist, power, creature" as relevant keywords. This is probabily related more to science fiction, with a topic related to experimentations and creating supernatural creatures. It seems to be linked to control and malificient forces (keywords power, world, use, destroy).
+								</li>
+								<li>
+									<strong>Topic 2</strong>: We chose "body, vampire, child, night" as the relevant keywords. Even though the topic of the family is present (keywords child, home, mother), it seems to be a topic that is in the supernatural register, with a horror part (keywords run, dead, death, attack, body, night). The effect of a glooming revelation seems also depicted by this topic with strong verbs (keywords reveal, discover, appear, realize).
+								</li>
+								<li>
+									<strong>Topic 3</strong>: "money, steal, prisoner, bank, drug" made the most sense to depicts the topic. It seems pretty straighforward that the movies in that topic talks about crimes like stealing, break-ins of banks, drug gangs, involving money in it. The consequences of the crime is also catched by the LDA (keywords prison, guard, prisoner, police, catch). There is also a supernatural component in that topic with the keywords dragon, stone and spell.
+								</li>
+								<li>
+									<strong> Topic 4</strong>: "team, game, coach, player" were the keywords chosen for this topic. It is also straighforward that the topic revolves around the universe of sport, as several sports name are mentioned in the keywords (basketball, football, hockey). The vocabulary of a game is also there (keywords win, lose, score, play, first, start, decide).
+								</li>
+								<li>
+									<strong>Topic 5</strong>: The keywords "ship, alien, earth, attack" are also pretty straighforwards to draw an idea of the topic. It seems more revolved into sci-fi movies, probabily involving space adventures (keywords ship, alien, earth), that has also conflict and violence (keywords attack, destroy, death, shoot, fire, use).
+								</li>
+								<li>
+									<strong>Topic 6</strong>: "murder, police, gang, fight, crime". It is also pretty straightforward that the subject revolves around killing (keywords murder, crime, gang, killer, death, shoot). The crime probabily involves family in it (keywords father, daughter, wife, brother, family, mother), so it would be more a psychological thriller rather than the topic 3 which involves more of an organization and money in it.
+								</li>
+								<li>
+									<strong>Topic 7</strong>: We chose "agent, shoot, military, bomb" as relevant keywords to depict the topic. This topic seems to be more revolved around the using of military forces (keywords military, soldier, bomb, fire, shoot), in order to maybe to protect an important entity (keywords president, plane, plan, decide, order) from a group or person that wants to harm (keywords group, attempt, bomb) this latter.
+								</li>
+								<li>
+									<strong>Topic 8</strong>: "band, family, show, music, dream" keywords seems describe stories revolved around music and pursuing a dream career in the music domain. The family theme is present (keywords family, mother, home), along with romance (keywords girlfriend, relationship, together). We also have the theme of the desire, probabily to succeed in music (keywords dream, want, career, start).
+								</li>
+								<li>
+									<strong>Topic 9</strong>: The "family, father, mother, daughter, wedding" keywords are also very straightforward, and movies that are in this topic revolves around the family, specially around romance and relationship between a man and a woman concretizing into mariage and founding a family together(keywords husband, wife, marry, wedding, pregnant, child). The professional world is also depicted (keywords work, money, business).
+								</li>
+								<li>
+									<strong>Topic 10</strong>: "home, school, night, parent, party, decide" were the keywords that we chose to describe this topic. Although it is less straightforward than some of the previous topics, it seems to revolves around family (keywords mother, father, parent, home, family), probablily with a teenager (keywords school) and involving some conflicts or discussion around that (keywords party, ask, want, talk).
+								</li>
+								<li>
+									<strong>Topic 11</strong>: The kewyords "escape, camp, attack, truck" were chosen for that topic. This also depicts the usage of force and violence, so this topic will be found more in the action movies. The vocabulary of protecting something is also present (keywords fight, rescue, town, monster).
+								</li>
+								<li>
+									<strong>Topic 12</strong>: This last topic's keywords are "movie, woman, play, character, role". This seems to talk about the life in the movie field (keywords role, character, play, movie, lead, story). The character involved seems to be more feminime (keyswords woman, girl, wife).
+								</li>
+							</ul>
+						</p>
 						
 	
 						<figure class="alignwide">
@@ -672,7 +725,7 @@
 						</p>
 
 
-						<h1 class="entry_header"><em><strong>"Everything everywhere all at once"</strong></em></h1>
+						<h1 class="entry_header" style="text-align: center;"><strong>Putting it all together</strong></h1>
 					
 						<p class = "drop-cap">
 							<strong>In this part, we offer you an in-depth study of 4 movie genres that we have selected to show you that the 
@@ -869,7 +922,7 @@
 						
 						
 		
-						<h1 class="entry_title" style="text-align: center;"><strong>Conclusion</strong></h1>
+						<h1 class="entry_title" style="text-align: center;"><strong>Final words</strong></h1>
 						<p style="text-align: justify"> 
 							With our study, we can determine that “Bollywood” and “Hollywood” films are 
 							surely different. By making a first analysis on different characteristics, we 
@@ -877,32 +930,32 @@
 							and runtimes. For the topics talked in movies, they have similarities but some
 							subjects are more present in Indian movies such as family or wedding, while 
 							American movies have more stories about school or parties. This analysis shows 
-							that there is a cultural difference in American and Indian cinema, while they 
-							have the same labels as the genre, for example.
+							that there is a cultural difference in American and Indian cinema, even when they 
+							are labeled as belonging to the same genre, for example.
 						</p>
 						
 						<p style="text-align: justify">
-							Indeed, we have seen that the genre drama the most common genre in America and 
+							We have seen that the genre drama the most common genre in America and 
 							India. However, in the last part of our analysis, we see that these type of movies
 							have similar topics keywords for some of the clusters, but also have their 
 							differences. Indeed, two clusters stand out for each industry. We have observed 
 							that a type of Indian drama is more focused around love, romance and relationship, 
 							whereas a type of American drama is more revolved around action with crime and 
 							violence (c.f. t-SNE results and country proportion/topic repartition on drama 
-							genre, cluster id 0 and 3). It is furthermore interesting to see that drama has
+							genre, cluster id 0 and 3). Furthermore, it is interesting to see that drama has
 							a lot of subgenres in it and that there is a whole spectrum of different 
 							stories within it.
 						</p>
 						
 						<p style="text-align: justify">
-							This result supports the idea that the movies industry culture of two radically
-							different countries is rather difficult to compare and quite complex, in the 
-							sense of capturing the subtle difference that lies between the two cultures.
+							This result supports the idea that the movie industry cultures of two radically
+							different countries are rather difficult to compare and quite complex. Much care needs
+							to be taken when trying to capture the subtle differences that lie between the two cultures.
 						</p>
 						
 						<p style="text-align: justify">
-							It is hence reducing to try to label each movies (which is, to some extension 
-							a representation of the country culture : c. f. « Movies and Culture: The Role 
+							It is hence reducing to try to label each movies (which is, to some extent 
+							a representation of the country's culture : c. f. « Movies and Culture: The Role 
 							of Films in Shaping Societal Norms and Values » by Jennifer A. Fritsche, published
 							in the Journal of Social and Political Psychology in 2016.) and have a meaningful,
 							sense-making comparison. It was important here for us to rather observe the
@@ -919,19 +972,19 @@
 							In addition, we have to keep in mind the bias that we have in the dataset. 
 							Indeed, there are many more American films than Indian ones in our data, 
 							although the Indian industry is known for its large number of films produced. 
-							The only films in our data are potentially the tip of the iceberg. We also may
-							have only the famous films which is not representative of the entire Indian 
-							film culture. To support the idea of the strong influence of the American movie
-							industry, the (reducing) genre 'world cinema' shows that the genre designation 
-							of Indian films is made by Westerner.
+							The films in our data are potentially just the tip of the iceberg. We also may
+							only have the famous films which is not representative of the entire Indian 
+							film culture. To support the idea that the Indian film selection in the dataset 
+							was shaped by the western view of Indian cinema, we noted the overwhelming presence 
+							the (reducing) genre 'world cinema' when labeling the Indian movies.
 						</p>
 
 						<p style="text-align: justify">
 							Finally, we started this analysis by having the assumption that Bollywood, by the 
 							essence of its name, was inevitably influenced and shaped by Hollywood. Going 
 							through the analysis, learning more and more about Indian movie industry was 
-							enlightening and we realized how much this two industries can be considered as
-							entities with their own characters.
+							enlightening and we realized how much these two industries can be considered as
+							entities with their own identities.
 						</p>
 
 						<blockquote>
@@ -984,6 +1037,29 @@
                 </div>
 
             </div> <!-- end s-footer__bottom -->
+
+			<style>
+				
+				.scroll-button {
+				  position: fixed;
+				  bottom: 90px;
+				  right: 10px;
+				  background-color: rgb(173, 201, 226);
+				  border: none;		
+				  width: 20px;
+				}
+
+			  </style>
+			  
+			  <button class="scroll-button" title="Topic labels" onclick="scrollToElement('#LDA')"></button>
+			
+			<script>
+			function scrollToElement(id) {
+				const element = document.querySelector(id);
+				element.scrollIntoView({ behavior: 'smooth' });
+			}
+			</script>
+			
            
             <div class="ss-go-top">
                 <a class="smoothscroll" title="Back to Top" href="#top">
