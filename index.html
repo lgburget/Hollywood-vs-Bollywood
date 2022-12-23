@@ -89,7 +89,7 @@
                                 <div class="hero__entry-text-inner">
                                     <div class="hero__entry-meta">
                                         <span class="cat-links">
-                                            <a href="category.html">Data Story</a>
+                                            <a href="category.html">Data Story.</a>
                                         </span>
                                     </div>
                                     <h2 class="hero__entry-title">
@@ -123,28 +123,17 @@
 
 						<h1> Some numbers on our data </h1> 
 						<p class="lead">
-						Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor 
-						sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat 
-						enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco 
-						magna amet magna cupidatat qui labore cillum cillum cupidatat fugiat nostrud. </p> 
+						Insert some stats on our dataset using cool formatting</p> 
 
 						<p class="drop-cap">
-						Eligendi quam at quis. Sit vel neque quam consequuntur expedita quisquam. Incidunt quae 
-						qui error. Rerum non facere mollitia ut magnam laboriosam. Quisquam neque quia ex eligendi 
-						repellat illum quibusdam aut. Architecto quam consequuntur totam ratione reprehenderit est 
-						praesentium impedit maiores incididunt adipisicing veniam velit .
+						We start our journey by performing exploratory data analysis.
+						</p>
+
+						<p>
+						Insert actor age plot etc
 						</p>
 						
-						<h2>Topic detection</h2>
-						<p>
-						Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor 
-						sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat 
-						enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco 
-						magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum 
-						adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut 
-						laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat 
-						in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
-						</p>
+						<h1>Topic detection</h1>
 
 						<h2> Results of the LDA</h2>
 						<figure class="alignwide">
@@ -159,7 +148,7 @@
 							</style>
 							<body>
 								<div id="iframeDiv">
-									<iframe src="lda_2.html" id = "target" iframetag scrolling = no></iframe>
+									<iframe src="lda.html" id = "target" iframetag scrolling = no></iframe>
 										<script>
 											let iframe = document.querySelector("#child-iframe");
 						
@@ -172,43 +161,163 @@
 							</body>
 						</figure>
 
+						<h3 style="text-align: center;">Navigating the visualization</h3>
+						
+						<div class="row">
+							<p style = "margin: 0%;">
+								<div class="column lg-4 tab-6 mob-12">
+									<h6>Topic Bubble</h6>
+									<ul style="font-size: smaller;">
+										<li>The representation includes topics distribution in the 2-dimensional space (left side panel). These topics are represented in the form of bubbles.</li>
+										<li>The <strong>larger the bubble, the more frequent is the topic</strong> in the documents.</li>
+										<li>Since we have a low number of topics (10), we have big non-overlapping bubbles, scattered throughout the chart.</li>
+										<li>The distance between the topics is an approximation of the semantic relationship between these latter.</li>
+										<li>The <strong>topics that share common words will be overlapping</strong> in comparison to the non-overlapping topics.</li>
+									</ul>
+								</div>
+
+								<div class="column lg-4 tab-6 mob-12">
+									<h6>Horizontal Bar Graph</h6>
+									<ul style = "font-size: smaller;">
+										<li>The bar graph shows the frequency distribution of the words in the documents (in blue color).</li>
+										<li>The red area describes the frequency of each word in a given topic.</li>
+										<li>When selecting a topic (clicking on a topic bubble), the top 30 most relevant terms for the topic are shown.</li>
+										<li>Hovering over the specific words (in the right panel), the bubbles containing the words grows bigger or smaller if they also have it. The size of the bubble in this scenario describes the weight of the word on that topic. <strong>The higher the weight of the selected word, the larger will be the size of the bubble.</strong></li>
+									</ul>
+								</div>
+
+								<div class="column lg-4 tab-6 mob-12">	
+									<h6>Relevance Metric</h6>
+									<ul style = "font-size: smaller;">
+										<li>Rank words in topics based on their frequency by varying the relevance metric lambda parameter (top right slide bar), that goes from 0 to 1.</li>
+										<li>Decreasing the lambda parameter means increasing the weight of the ratio (Frequency of word given the topic / Overall frequency of the word in the documents). Decreasing the lambda parameters gives words that are more specific to the topic. Important words for the given topic then moves upward.</li>
+									</ul>
+								</div>	
+							</p>
+						</div>
+
 						<p>
-						We can also visualize the proportion of each movie industry inside of the topics we found with the LDA
+							<h3>Interpretation</h3>
+							<p>
+								This topic analysis was really successful in detecting and segregating topics. We find a <strong> diversity of topics</strong> that span a wide range of lexicons.
+								However a limitation to this analysis is that we are <strong> not able to detect the semantic relationship between the words</strong> in a given topic, nor can we infer the context in which they appear. 
+							</p>
+							<p>
+								This plot, while being very informative, doesn't inform us about the use of said topics in each movie industry. 
+								We extracted those topics from a dataset containing both movie industries, and we are not able to see 
+								how they are used in each industry.
+							</p>
+							<p>
+								This is why our next step is to explore the <stong>differences between the topics</stong> in each movie industry.
+							</p>
 						</p>
 						
 	
 						<figure class="alignwide">
 							<header>
-								<h3>Topics distribution between movie industries</h3>
+								<h2>Topics distribution between movie industries</h2>
 							</header>
 							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/1.embed" height="525" width="100%"></iframe>
 						</figure>
-
+						
 						<p>
-						Duis ex ad cupidatat tempor Excepteur cillum cupidatat fugiat nostrud cupidatat dolor 
-						sunt sint sit nisi est eu exercitation incididunt adipisicing veniam velit id fugiat 
-						enim mollit amet anim veniam dolor dolor irure velit commodo cillum sit nulla ullamco 
-						magna amet magna cupidatat qui labore cillum sit in tempor veniam consequat non laborum 
-						adipisicing aliqua ea nisi sint ut quis proident ullamco ut dolore culpa occaecat ut 
-						laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat 
-						in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
+							This plot shows the distribution of the mean normalized topic prevalence in each movie industry. We replaced topic number by
+							words that are the most representative of the topic.
+						</p>
+						<p>
+							We can see that the topics are not distributed uniformly across the movie industries. 
+							For example, the topic containing <em>love, marriage, wedding</em> is significantly more prevalent in the Indian movie industry than in the American one. 
+							We can also see that the topic containing <em>home, school, work, party</em> is more prevalent in the American movie industry than in the Indian one.
+						</p>
+						<p>
+							Those differences could be due to underlying cultural differences between the two countries, but also could 
+							be due to a bias in our dataset. 
+						</p>
+						<p>
+							Topics inderectly inform us about the content of the movies through their summary, but so does their genre. How does the movie genre relate 
+							to the topics covered in the movie? Can we identify differences between the movies industry 
+							and refine our understanding of them through the intersection of the topics and the genre? 
 						</p>
 
-						<h2 class="entry__header"> Exploring further differences between genres: deep dive</h2>
-					
 
+						<h1><em>"Everything everywhere all at once"</em></h1>
+					
+						<p class = "drop-cap">
+							<strong>In this part, we offer you an in-depth study of 4 movie genres that we have selected to show you that the 
+							notion of movie genre is not uniform across the globe.</strong> This part of the analysis can be explored in many
+							ways and we encourage you to play with the different visualizations and the different genres. We also include 
+							an analysis of one genre below the plot to help you understand how to navigate through the visualizations.
+						</p>
+						<h3 style="text-align: center;">Navigating the visualizations</h3>
+						<div class="row">
+							<div class="column lg-6 mob-12">
+								<p>
+									<h6 style="text-align: center;">Left pannel</h6>
+									<p style = "font-size: smaller;">
+										Left pannel contains a plot of the t-SNE 
+										(t-Distributed Stochastic Neighbor Embedding) latent space for Indian and American movies. 
+										This plot has been created using standardized actor data and the prevalence of various topics 
+										in the movies. The t-SNE latent space is a way of visualizing high-dimensional data in a 
+										lower-dimensional space.
+									</p>
+									<p><strong>There are two visualization options</strong></p>
+									<p><ul style = "font-size: smaller;">
+										<li>
+											Clicking on <strong><u>Country</u></strong> will differentiate the movies by country. 
+											Sticking with the color code we previously used, <strong style="color: rgb(242, 153, 0);" >Indian movies</strong> 
+											will be colored in orange and  <strong style="color: rgb(29, 15, 255);">American movies</strong> in blue.
+										</li>
+										<li>
+											Clicking on <strong><u>K-means</u></strong> will differentiate the movies by the 
+											cluster they belong to. The clusters are computed using the K-means algorithm on the t-SNE latent space.
+										</li>
+									</ul></p>
+								</p>
+							</div>
+							<div class="column lg-6 mob-12">
+								<p>
+									<h6 style="text-align: center;">Right pannel</h6>
+									<p style = "font-size: smaller;">
+										On the right panel, you can switch between 3 cluster representations. You can relate each 
+										cluster to the data that describe it via its color.
+									</p>
+
+									<p><strong>There are three visualization options</strong></p>
+
+									<ul style = "font-size: smaller;">
+										<li>
+											Clicking on the <strong><u>Topic</u></strong> option will show you the <strong>mean 
+											standardized prevalence of each topic of each cluster</strong>. Hovering the cursor over each cluster
+											will show you the mean prevalence of each topic in the cluster, ordered from most (top) to least
+											(bottom) prevalent topic in the selected cluster. Negative values indicate that this topic is 
+											under-represented in the cluster compared to it's overall prevalence in our dataset.
+										</li>
+										<li>
+											Clicking on the <strong><u>Country</u></strong> option will show you the <strong>country 
+											representation in each cluster</strong>. As we have an unbalanced dataset with more American than Indian movies, 
+											we have normalized those values by dividing them respectively by the total proportion of Indian and 
+											American movies in our dataset.
+										</li>
+										<li>
+											Clicking on the <strong><u>Actor</u></strong> option will show you the raw mean of each cluster for different statistics about actors.
+											This plot shows that each movie genre is represented in very different ways in terms of actors.
+										</li>
+									</ul>
+								</p>
+							</div>
+						</div>
 						<head>
 							<style>
 							  /* Some styling for the pagination buttons */
 							  .pagination-button {
 								display: inline-flex;
-								padding: 5px 10px;
 								cursor: pointer;
+								margin: 10px 10px;								
+								padding: 10px 10px;
 							  }
-						
 							  #pagination {
-							  width: 50%;  /* Set a fixed width for the container */
-							  margin: 0 auto;  /* Center the container horizontally */
+							  width: 70%;  /* Set a fixed width for the container */
+							  margin: auto;  /* Center the container horizontally */
 							}
 							</style>
 						</head>
@@ -219,8 +328,9 @@
 								<div class="column lg-12">
 									<div class="pagination-button">
 											<div class="btn btn--stroke u-fullwidth" onclick="changeIframe(urls[0], urls[1])">Romance</div>
-											<div class="btn btn--stroke u-fullwidth" onclick="changeIframe(urls[4], urls[5])">Horror</div>
+											<div class="btn btn--stroke u-fullwidth" onclick="changeIframe(urls[4], urls[5])">Drama</div>
 											<div class="btn btn--stroke u-fullwidth" onclick="changeIframe(urls[2], urls[3])">Action</div>
+											<div class="btn btn--stroke u-fullwidth" onclick="changeIframe(urls[6], urls[7])">Comedy</div>
 									</div>
 								</div> <!-- end column -->
 							</div> <!-- end pagination -->
@@ -230,17 +340,18 @@
 							<div class="row">
 								<p>
 									<div class="column lg-6 tab-12">
-										<h3>t-SNE results, with k-means clustering (k=5)</h3>
+										<h3>t-SNE results, with k-means clustering</h3>
 										<iframe id="igraph_1" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/5.embed" height="550" width="550"></iframe>
 									</div>
 								</p>
 								<p>
 									<div class="column lg-6 tab-12">
 						
-									<h3>Exploration of the difference between the clusters</h3>
+									<h3>Actor data, country proportions and topic repartition in each cluster</h3>
 									<iframe id="igraph_2" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/7.embed" height="550" width="550"></iframe>
 								</p>
-							</div>
+							</div>	
+							
 							</figure>
 							<script>
 								// Function to change the src attribute of the iframe
@@ -249,57 +360,64 @@
 									document.getElementById('igraph_2').src = url_2;
 								}
 						
-								var urls = ['https://plotly.com/~lgburget/5.embed', 'https://plotly.com/~lgburget/7.embed', 'https://plotly.com/~lgburget/11.embed', 'https://plotly.com/~lgburget/13.embed', 'https://plotly.com/~lgburget/15.embed', 'https://plotly.com/~lgburget/18.embed'];
+								var urls = [
+								'https://plotly.com/~lgburget/5.embed', 
+								'https://plotly.com/~lgburget/7.embed', 
+								'https://plotly.com/~lgburget/11.embed', 
+								'https://plotly.com/~lgburget/13.embed', 
+								'https://plotly.com/~lgburget/20.embed', 
+								'https://plotly.com/~lgburget/23.embed',
+								'https://plotly.com/~lgburget/51.embed',
+								'https://plotly.com/~lgburget/53.embed',
+
+							];
 							</script>
 						
 						</body>		
 
-						<p>
-						Harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta 
-						nobis est eligendi optio cumque nihil impedit quo minus <a href="http://#">omnis voluptas assumenda est</a> 
-						id quod maxime placeat facere possimus, omnis dolor repellendus. Temporibus autem quibusdam et 
-						aut officiis debitis aut rerum necessitatibus saepe eveniet ut et.</p>
+						<div class="row">
+							<div class="column lg-12">
+								<strong>You will find many examples by navigating through this plot. We will detail one of them here</strong>
 
-
-						<p>
-						Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores 
-						et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa. 
-						Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit 
-						libero, a pharetra augue laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat 
-						occaecat fugiat in adipisicing in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed..</p>
-
-						<h3>Smaller Heading</h3>
-
-						<p>
-						Quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
-						eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas 
-						assumenda est, omnis dolor repellendus.
-						</p>
-
-						<p>
-						Quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est 
-						eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas 
-						assumenda est, omnis dolor repellendus.
-						</p>
-							
+								<p>	
+								Let's take the genre '<em><strong>romance</strong></em>'. The K-Means algorithm find 5 clusters. We can observe on the right panel by selecting 
+								'Countries' that in the <strong style = "color: rgb(211, 180, 42);">cluster 4</strong>, that <strong>Indian movies are largely over-represented</strong>. On the 
+								other hand, for the <strong style = "color: rgb(78, 85, 113);">cluster 3</strong>, in grey, it's the <strong>American movies that are largely over-represented</strong>.
+								</p>
+					
+								<strong>Now let's focus on the standardized topic prevalence</strong>
 								
-						<p>
-						Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et 
-						quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa.</p>
+								<p>
+								We first see that the topic concerning women and
+								relationship has a much higher prevalence in <strong style = "color: rgb(78, 85, 113);">cluster 3</strong> than in 
+								<strong style = "color: rgb(211, 180, 42);">cluster 4</strong> although it
+								remains important in the latter. 
+								</p>
+								<p>
+								Secondly, we can see that the topic containing the words '<strong>father</strong>',
+								and '<strong>mother</strong>' have a negative standardized prevalence in the <strong style ="color: rgb(78, 85, 113);">cluster 3</strong> whereas in  
+								<strong style = "color: rgb(211, 180, 42);">cluster 4</strong> we have positive values. This indicates that there exists a sub-genre of romance 
+								mainly present in India where the mother- and father-related topics are important. 
+								</p>
 
-						<ul>
-							<li>Donec nulla non metus auctor fringilla.
-								<ul>
-									<li>Lorem ipsum dolor sit amet.</li>
-									<li>Lorem ipsum dolor sit amet.</li>
-									<li>Lorem ipsum dolor sit amet.</li>
-								</ul>
-							</li>
-							<li>Donec nulla non metus auctor fringilla.</li>
-							<li>Donec nulla non metus auctor fringilla.</li>
-						</ul>
-
-						<p>
+								<p>
+								Interestingly, <strong style = "color: rgb(139, 56, 114);">cluster 5</strong> has a negative standardized prevalence score
+								in the topic related to women and relationships, and a positive score in the topic concerning escapes, shooting and trucks. This subgenre
+								of <strong>romance</strong> movies is also proportionally more present in Indian cinema.
+								</p>
+								<p>
+								It is also important to notice that there are  
+								clusters, or sub-genres, that are represented more equally in both countries or with only a 
+								slight dominance of one country like <strong style = "color: rgb(211, 81, 42);">cluster 1</strong>, 
+								<strong style = "color: rgb(59, 150, 57);">cluster 2</strong> or <strong style = "color: rgb(139, 56, 114);">cluster 5</strong>. 
+								This shows that there are still some Indian and American romance that share a lot of features.
+								</p>
+							</div>
+						</div>
+		
+						
+						<h1><strong>Conclusion</strong></h1>
+						<p> 
 						Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et quas 
 						molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa. Aenean eu leo quam. 
 						Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue 

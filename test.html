@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hollywood vs Bollywood</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/jpg" sizes="820x820" href="icon.jpg">
+    <link rel="icon" type="image/jpg" sizes="820x820" href="icon.jpg">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<head>
+    <style>
+      /* Some styling for the pagination buttons */
+      .pagination-button {
+        display: inline-flex;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      #pagination {
+      width: 50%;  /* Set a fixed width for the container */
+      margin: 0 auto;  /* Center the container horizontally */
+    }
+    </style>
+</head>
+
+<body id="top">
+    <!-- Pagination buttons -->
+    <div id="pagination">
+        <div class="column lg-12">
+            <div class="pagination-button">
+                    <div class="pgn__num" onclick="changeIframe(urls[0], urls[1])">Romance</div>
+                    <div class="pgn__num" onclick="changeIframe(urls[4], urls[5])">Horror</div>
+                    <div class="pgn__num" onclick="changeIframe(urls[2], urls[3])">Action</div>
+            </div>
+        </div> <!-- end column -->
+    </div> <!-- end pagination -->
+
+    <!-- Content to display -->
+    <figure class="alignwide">
+    <div class="row">
+        <p>
+            <div class="column lg-6 tab-12">
+                <h3>t-SNE results, with k-means clustering (k=5)</h3>
+                <iframe id="igraph_1" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/5.embed" height="550" width="550"></iframe>
+            </div>
+        </p>
+        <p>
+            <div class="column lg-6 tab-12">
+
+            <h3>Exploration of the difference between the clusters</h3>
+            <iframe id="igraph_2" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/7.embed" height="550" width="550"></iframe>
+        </p>
+    </div>
+    </figure>
+    <script>
+        // Function to change the src attribute of the iframe
+        function changeIframe(url_1, url_2) {
+            document.getElementById('igraph_1').src = url_1;
+            document.getElementById('igraph_2').src = url_2;
+        }
+
+        var urls = ['https://plotly.com/~lgburget/5.embed', 'https://plotly.com/~lgburget/7.embed', 'https://plotly.com/~lgburget/11.embed', 'https://plotly.com/~lgburget/13.embed', 'https://plotly.com/~lgburget/15.embed', 'https://plotly.com/~lgburget/18.embed'];
+    </script>
+
+</body>
+
