@@ -94,7 +94,7 @@
                                     </div>
                                     <h2 class="hero__entry-title">
                                         <a href="single-standard.html">
-                                            Hollywood vs Bollywood
+                                            Hollywood vs Bollywood: Endgame
                                         </a>
                                     </h2>
                                     <p class="hero__entry-desc">
@@ -121,8 +121,10 @@
 				<div class="column lg-12">
 
 					<article class="entry format-standard">
-						
-						<h2 class="entry__title" style="text-align: center;">In 2019...</h2>
+						<p></p>
+						<p></p>
+
+						<h2 class="entry__title" style="text-align: center; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">In 2019</h2>
 
 						<p class="lead">
 						
@@ -272,9 +274,7 @@
 								</div>
 								<div class="column lg-6 mob-12">
 									<h6 style="text-align: center;"><strong>... and the Indian movie industry produced</strong></h6>
-									<p>
-
-												
+									<p>		
 										<body>
 											<div id="number_2" style="font-size: xx-large; text-align: center;" >0</div>
 											<h6 style="text-align: center;"><strong>... films </strong></h6>
@@ -289,7 +289,7 @@
 												const increment_2 = 1;
 										
 												// Set the interval (in milliseconds) at which the value should be incremented
-												const interval_2 = 1;
+												const interval_2 = 4;
 										
 												// Set the timer
 												const timer_2 = setInterval(function() {
@@ -336,7 +336,8 @@
 							</p>
 						</div>
 
-						<p class="drop-cap" style="font-size: larger;">
+						<p class="drop-cap" style="font-size: larger; text-align: justify;" >
+						
 							Bollywood and Hollywood are very famous film industries nowadays. A westerner might assumes 
 							that Bollywood has a long way to go before having the same importance in term of production, 
 							compared to the American industry. When we look at some numbers, the Indian movie industry is 
@@ -356,6 +357,7 @@
 								<em style="text-align: center;">Foreign?</em>
 							</br>
 						</p>
+						<p style="text-align: justify">
 							Unlike Hollywood, <strong>Bollywood is not a real place</strong>, but only a contraction 
 							of Hollywood, the term representing the place of reference for American cinema, and Bombay, 
 							the capital of India (now Mumbai) but also the historical base of Indian cinema. The association 
@@ -364,18 +366,208 @@
 							similarities and differences between these two world famous film factories. 
 						</p>
 						<p style="font-size: larger; text-align: center;">
-							<strong>Indian films impregnated by American production or do they have their own completely different identity?</strong> 
+							<strong>Are Indian films heavily influenced by American production or do they have their own completely different identity?</strong> 
+						</p>
+						<p style="text-align: center;">
+							To answer these questions, we use data from the CMU Movie Summary Corpus, which contains a 
+							wealth of information on different films from around the world, as well as their summaries. 
+							We will take the films from the American and Indian production and extract the most interesting
+							features such as movie genre, topics spoken in the summaries or the characteristics of the 
+							actors and then compare them to each other.
+						</p>
+						
+						<p></p>
+						<p></p>
+						<p></p>
+
+					
+						<h1 class="entry__header"><strong>Getting familiar with the data</strong></h1>
+
+						<h1 style="text-align: center;">Movie genres</h1>
+						<figure>
+							<img src="images/plots/movie_genres.png" sizes="(max-width: 1000px) 100vw, 1000px" alt="">
+						</figure>
+						<p style="text-align: justify">
+							As the plot shows, "<em>drama</em>" is the prominent movie genre in both American and 
+							Indian movies. 
 						</p>
 
-						<h1 class="entry__header">Getting familiar with the data</h1>
+						<p style="text-align: justify">
+							American movies seems to have a better distribution of different genres than 
+							Indian movies, that are more focused around "drama".
+						</p>
 
-						<h2></h2>
+						<p style="text-align: center;">
+								<u>Some questions arises here :</u>
+								<br><em>Is American drama the same as Indian drama ?</em> 
+								<br><em>What if these notions are completely different in both culture ?</em>
+								<br><strong>We will investigate these questions further towards the end of our analysis.</strong>
+						</p>
+						 
+						<p style="text-align: justify">
+							Furthermore, both of Indian and American movies have a large number of movie 
+							genres, so it could be interesting to select a restricted group of movie genres
+							that allows better and more precise results for our further analysis.
+						</p>
+
+						<p style="text-align: justify">
+							For example, genre like "<em>world cinema</em>" seems rather not specific enough to 
+							categorize the movies. Indeed, the term "<em>world cinema</em>" refers to films produced 
+							outside of the United States and Europe, or to films that are made in a 
+							particular country or region but are intended for international audiences. 
+							World cinema includes a wide variety of film genres, such as action, drama, 
+							comedy, romance, horror, and more. It encompasses films from many different 
+							countries and cultures, each with their own unique traditions and styles of 
+							storytelling.
+						</p>
+
+						<p style="text-align: justify">
+							It is rather reducer to put every genre produced outside of the Occident in a 
+							global term like "<em>world cinema</em>". <strong>We hence a lot of information about the
+							spectrum of differences and different themes of movies produced around the 
+							world</strong>. This could be another bias that our data set has, on the fact that 
+							Indian movies are not represented the same way as American movies.
+						</p>
+
+						<p style="text-align: justify">
+							This could explain the fact that there is more movie genres attributed to 
+							American movies than Indian movies, although we have to be careful of the 
+							fact that we have less Indian movies than American movies.
+						</p>
+
+						<p style="text-align: justify">
+							Finally, some genres are similar to each other or some of them include 
+							other genres (e.g. "action/aventure"). For these types of genres, we 
+							separated them and re-classified them in each one of the single genres.
+						</p>
+
+						<h1 style="text-align: center;">Movie runtime</h1>
+						<figure>
+							<img src="images/plots/movie_runtime.png" sizes="(max-width: 1000px) 100vw, 1000px" alt="">
+						</figure>
+						
+						<p style="text-align: justify">
+							We notice that Indian movies have a tendency to be longer (by ~48 minutes) and 
+						than American movies.
+						</p>
+
+						<p style="text-align: justify">
+							There could be a bias in our dataset, because early Indian cinema might be 
+							under-represented compared to early American cinema.
+						</p>
+						<p style="text-align: justify">
+							Although we can add that in general, Indian movies tend to have more 
+							elaborate plots and subplots, and they often include songs and dance sequences, 
+							which can contribute to their longer runtime. This is often a characteristic of 
+							Bollywood movies, in particular, which are known for their elaborate storylines 
+							and large casts. American movies, on the other hand, may be more focused on 
+							action and special effects, which may not require as much screen time. 
+						</p>
 
 
+						<h1 style="text-align: center;">Actor data</h1>
+						<h2>Age and gender</h2>
+						<figure>
+							<img src="images/plots/gender_age_indian_vs_usa_cut.png" sizes="(max-width: 1000px) 100vw, 1000px" alt="">
+						</figure>
+						<p style="text-align: justify">
+							We can observe that there is a significant difference (we computed a t-test
+							between the two data and have a significant p-values, c.f. notebook) between 
+							actress in Indian and in American. The actresses are younger in the Indian movies
+							than in the American ones.
+						</p>
+							
+						<p style="text-align: justify">
+							It might mainly be driven by the sample size, but we can propose some possible
+							factors to explain why Indian actresses might be younger than the American 
+							actresses:
+						</p>
+						<ul>
+							<li style="text-align: justify">
+								<strong>Cultural preferences</strong>: In some cultures, including Indian culture, youth and
+								beauty are often prized and valued highly. This may lead to a preference for
+								younger actresses in the film industry.
+							</li>
+							<li style="text-align: justify">
+								<strong>The demands of the film industry</strong> : Acting in movies can be physically
+								demanding, and younger actresses may be better able to handle the 
+								demands of long shooting schedules and demanding roles.
+							</li>
+							<li style="text-align: justify">
+								<strong>Physical demands of acting</strong>: In some cases, certain roles may require 
+								actresses to have a certain appearance or physicality, which may be more 
+								common in younger actresses.
+							</li>
+						</ul>
+						<p style="text-align: justify">
+							It is also worth noting that there is a wide range of ages among actresses 
+							in Indian movies, and many actresses in India continue to work in the 
+							film industry well into their 40s, 50s, and beyond.
+						</p>
+							
 
-						<h1 class="entry__header">Topic detection</h1>
+						<h2>Number of films per actors</h2>
+						<figure>
+							<img src="images/plots/number_films_per_actor_gender_cut.png" sizes="(max-width: 1000px) 100vw, 1000px" alt="">
+						</figure>
+						<p style="text-align: justify">
+							We probably have a bias in our dataset in the quantity of information we 
+							have in our dataset regarding the American films. 
+							We are far more likely to have the names of actors that make a single 
+							brief appearance in an American film. 
+							However, regarding the other extreme, we can see that there is a lot more
+							ultra-prolific Indian film actors than American film actors.
+						</p>
+	
+						<p style="text-align: justify">
+							In both film industries we see however that most of the hyper-prolific 
+							actors are males, which is probably linked to the difference in career 
+							prospects with age.
+						</p>
 
-						<h2> Results of the LDA</h2>
+						<p style="text-align: justify">
+							Also, there is some evidence to suggest that female actresses tend to 
+							have fewer opportunities to play leading roles in movies than male actors
+							in both Hollywood and Bollywood. Indeed, in 2015, the Center for the 
+							Study of Women in Television and Film at San Diego State University 
+							published a report titled "It's a Man's (Celluloid) World," which found
+							that women made up just 12% of protagonists in the top 100 grossing 
+							films of 2014.
+						</p>
+
+						<p style="text-align: justify">
+							This phenomenon, known as the "gender gap" or the "female movie deficit," 
+							refers to the underrepresentation of women in the film industry, both in 
+							front of and behind the camera.
+						</p>
+
+						<p style="text-align: justify">
+							There are also more factors that may contribute to the gender gap in the
+							film industry, including societal and cultural biases, the lack of diverse
+							and complex female characters in film scripts, and the limited number of
+							female directors and producers.
+						</p>
+
+						<p style="font-size: larger; text-align: justify;">
+							This is once again an angle that could be included in further analysis 
+							regarding trends and film success (ratings) prediction.
+						</p>
+
+						<h6 style="text-align: center;"><em>Did you know? </em></h6>
+						<p style="text-align: center;">
+							<em>
+								<small style="text-align: justify">
+									Indian is a country with more than a dozen languages talked! Silent films brought
+									 all audiences together! But when Indian cinema
+									entered the sound era, the use of music and dance became a way to homogenise 
+									the national market across linguistic divides!
+								</small>
+							</em>
+							
+						</p>
+						<h1 class="entry__header"><strong>Topic detection and further analysis</strong></h1>
+
+						<h2>Extracting topics using Latent Dirichelet Allocation</h2>
 						<figure class="alignwide">
 							<style>
 								iframe[iframetag] {
@@ -401,11 +593,11 @@
 							</body>
 						</figure>
 
-						<h3 style="text-align: center;">Navigating the visualization</h3>
+						<h3 style="text-align: center;"><u>Navigating the visualization</u></h3>
 						
 						<div class="row">
-							<p style = "margin: 0%;">
-								<div class="column lg-4 tab-6 mob-12">
+							<p style = "margin: 0%; text-align: justify;">
+								<div class="column lg-4 tab-6 mob-12" >
 									<h6>Topic Bubble</h6>
 									<ul style="font-size: smaller;">
 										<li>The representation includes topics distribution in the 2-dimensional space (left side panel). These topics are represented in the form of bubbles.</li>
@@ -438,16 +630,16 @@
 
 						<p>
 							<h3>Interpretation</h3>
-							<p>
+							<p style="text-align: justify">
 								This topic analysis was really successful in detecting and segregating topics. We find a <strong> diversity of topics</strong> that span a wide range of lexicons.
 								However a limitation to this analysis is that we are <strong> not able to detect the semantic relationship between the words</strong> in a given topic, nor can we infer the context in which they appear. 
 							</p>
-							<p>
+							<p style="text-align: justify">
 								This plot, while being very informative, doesn't inform us about the use of said topics in each movie industry. 
 								We extracted those topics from a dataset containing both movie industries, and we are not able to see 
 								how they are used in each industry.
 							</p>
-							<p>
+							<p style="text-align: justify">
 								This is why our next step is to explore the <stong>differences between the topics</stong> in each movie industry.
 							</p>
 						</p>
@@ -460,27 +652,27 @@
 							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/1.embed" height="525" width="100%"></iframe>
 						</figure>
 						
-						<p>
+						<p style="text-align: justify">
 							This plot shows the distribution of the mean normalized topic prevalence in each movie industry. We replaced topic number by
 							words that are the most representative of the topic.
 						</p>
-						<p>
+						<p style="text-align: justify">
 							We can see that the topics are not distributed uniformly across the movie industries. 
 							For example, the topic containing <em>love, marriage, wedding</em> is significantly more prevalent in the Indian movie industry than in the American one. 
 							We can also see that the topic containing <em>home, school, work, party</em> is more prevalent in the American movie industry than in the Indian one.
 						</p>
-						<p>
+						<p style="text-align: justify">
 							Those differences could be due to underlying cultural differences between the two countries, but also could 
 							be due to a bias in our dataset. 
 						</p>
-						<p>
+						<p style="text-align: justify">
 							Topics inderectly inform us about the content of the movies through their summary, but so does their genre. How does the movie genre relate 
 							to the topics covered in the movie? Can we identify differences between the movies industry 
 							and refine our understanding of them through the intersection of the topics and the genre? 
 						</p>
 
 
-						<h1><em>"Everything everywhere all at once"</em></h1>
+						<h1 class="entry_header"><em><strong>"Everything everywhere all at once"</strong></em></h1>
 					
 						<p class = "drop-cap">
 							<strong>In this part, we offer you an in-depth study of 4 movie genres that we have selected to show you that the 
@@ -488,26 +680,34 @@
 							ways and we encourage you to play with the different visualizations and the different genres. We also include 
 							an analysis of one genre below the plot to help you understand how to navigate through the visualizations.
 						</p>
-						<h3 style="text-align: center;">Navigating the visualizations</h3>
+						<h3 style="text-align: center;"><u>Navigating the visualizations</u></h3>
+						
 						<div class="row">
 							<div class="column lg-6 mob-12">
 								<p>
+									<h6 style="text-align: center;">Changing movie genre</h6>
+
+									<p style="text-align: justify; font-size: smaller;">
+										To change the focus from a movie genre to another, nothing simpler, just click on the button of interest just below,
+										it will update the left and right pannels accordingly.
+									</p>
+
 									<h6 style="text-align: center;">Left pannel</h6>
-									<p style = "font-size: smaller;">
+									<p style = "font-size: smaller; text-align: justify;">
 										Left pannel contains a plot of the t-SNE 
 										(t-Distributed Stochastic Neighbor Embedding) latent space for Indian and American movies. 
 										This plot has been created using standardized actor data and the prevalence of various topics 
 										in the movies. The t-SNE latent space is a way of visualizing high-dimensional data in a 
 										lower-dimensional space.
 									</p>
-									<p><strong>There are two visualization options</strong></p>
+									<p style="font-size: smaller;"><strong>There are two visualization options</strong></p>
 									<p><ul style = "font-size: smaller;">
-										<li>
+										<li style="text-align: justify">
 											Clicking on <strong><u>Country</u></strong> will differentiate the movies by country. 
 											Sticking with the color code we previously used, <strong style="color: rgb(242, 153, 0);" >Indian movies</strong> 
 											will be colored in orange and  <strong style="color: rgb(29, 15, 255);">American movies</strong> in blue.
 										</li>
-										<li>
+										<li style="text-align: justify">
 											Clicking on <strong><u>K-means</u></strong> will differentiate the movies by the 
 											cluster they belong to. The clusters are computed using the K-means algorithm on the t-SNE latent space.
 										</li>
@@ -517,30 +717,45 @@
 							<div class="column lg-6 mob-12">
 								<p>
 									<h6 style="text-align: center;">Right pannel</h6>
-									<p style = "font-size: smaller;">
+									<p style = "font-size: smaller; text-align: justify;">
 										On the right panel, you can switch between 3 cluster representations. You can relate each 
 										cluster to the data that describe it via its color.
 									</p>
 
-									<p><strong>There are three visualization options</strong></p>
+									<p style="font-size: smaller;"><strong>There are three visualization options</strong></p>
 
 									<ul style = "font-size: smaller;">
-										<li>
+										<li style="text-align: justify">
 											Clicking on the <strong><u>Topic</u></strong> option will show you the <strong>mean 
 											standardized prevalence of each topic of each cluster</strong>. Hovering the cursor over each cluster
 											will show you the mean prevalence of each topic in the cluster, ordered from most (top) to least
 											(bottom) prevalent topic in the selected cluster. Negative values indicate that this topic is 
 											under-represented in the cluster compared to it's overall prevalence in our dataset.
 										</li>
-										<li>
+										<li style="text-align: justify">
 											Clicking on the <strong><u>Country</u></strong> option will show you the <strong>country 
 											representation in each cluster</strong>. As we have an unbalanced dataset with more American than Indian movies, 
 											we have normalized those values by dividing them respectively by the total proportion of Indian and 
 											American movies in our dataset.
 										</li>
-										<li>
-											Clicking on the <strong><u>Actor</u></strong> option will show you the raw mean of each cluster for different statistics about actors.
-											This plot shows that each movie genre is represented in very different ways in terms of actors.
+										<li style="text-align: justify">
+											Clicking on the <strong><u>Actor</u></strong> option will show you the raw mean of each cluster 
+											for different statistics about actors.
+											<br> <strong>These include (from left to right):</strong>
+											<ul>
+												<li>
+													The mean age of actors in the films, per cluster
+												</li>
+												<li>
+													The mean age of actresses in the films, per cluster
+												</li>
+												<li>
+													The mean number of films actors and actresses presnt in the dataset played in
+												</li>
+												<li>
+													The mean percentage of actresses per casts, per cluster
+												</li>
+											</ul>
 										</li>
 									</ul>
 								</p>
@@ -580,14 +795,14 @@
 							<div class="row">
 								<p>
 									<div class="column lg-6 tab-12">
-										<h3>t-SNE results, with k-means clustering</h3>
+										<h3>t-SNE latent space, with k-means clustering</h3>
 										<iframe id="igraph_1" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/5.embed" height="550" width="550"></iframe>
 									</div>
 								</p>
 								<p>
 									<div class="column lg-6 tab-12">
 						
-									<h3>Actor data, country proportions and topic repartition in each cluster</h3>
+									<h3>Actor data, country-wise distributions and topic repartition in each cluster</h3>
 									<iframe id="igraph_2" scrolling="no" style="border:none;" seamless="seamless" src="https://plotly.com/~lgburget/7.embed" height="550" width="550"></iframe>
 								</p>
 							</div>	
@@ -619,7 +834,7 @@
 							<div class="column lg-12">
 								<p style="font-size: larger; text-align: center;"><strong>You will find many examples by navigating through this plot. We will detail one of them here</strong></p>
 
-								<p>	
+								<p style="text-align: justify">	
 								Let's take the genre '<em><strong>comedy</strong></em>'. The K-Means algorithm was set to 4 clusters. We can observe on the right panel by selecting 
 								<strong><u>Countries</u></strong> that in the <strong style = "color: rgb(204, 79, 21);">cluster 1</strong>, that <strong>Indian movies</strong> are largely over-represented. On the 
 								other hand, for the <strong style = "color: rgb(59, 150, 57);">cluster 2</strong>, it's the <strong>American movies</strong> that are largely over-represented.
@@ -630,20 +845,20 @@
 									<br style="font-size: smaller;"><em style="font-size: smaller;">(You can access topic differences by clicking on the box with the downward arrow on the top left of the right-side plot and selecting)</em></br>
 								</p>
 								
-								<p>
-									The most important topic in the <strong style = "color: rgb(204, 79, 21);">cluster 1</strong>is the topic centered on family and daily life whereas in the 
+								<p style="text-align: justify">
+									The most important topic in the <strong style = "color: rgb(204, 79, 21);">cluster 1</strong> is the topic centered on family and daily life whereas in the 
 									<strong style = "color: rgb(59, 150, 57);">cluster 2</strong> this topic doesn't seem to be more covered than the average. Moreover we see that in 
 									<strong style = "color: rgb(59, 150, 57);">cluster 2</strong> the most important topic is about ships, aliens and discoveries, and in <strong style = "color: rgb(204, 79, 21);">cluster 1</strong> this topic is much 
 									less present than on average (negative mean normalized topic prevalence). 
 								</p>
-								<p>
+								<p style="text-align: justify">
 									We can deduce from this analysis that in India, more comedies are made
 									involving a family's daily life and very rarely add a sci-fi/adventure component.in the US, comedies mixed with some action seem to be very frequent. However, it is also important 
 									to notice that there are also other clusters, or sub-genres, that are represented equally in both 
 									countries like <strong style = "color: rgb(168, 58, 135);">cluster 0</strong> or <strong style = "color: rgb(78, 85, 113);">cluster 3</strong>. 
 									<strong>This shows that there are some sub-genres that are equally represented in India and the US.</strong>
 								</p>
-								<p>
+								<p style="text-align: justify">
 									We can also notice than when investigating the differences in the <strong><u>Actor</u></strong> visualization
 									 between <strong style = "color: rgb(204, 79, 21);">cluster 1</strong>
 									and <strong style = "color: rgb(59, 150, 57);">cluster 2</strong>, women happen to represent a smaller proportion of
@@ -654,17 +869,73 @@
 						
 						
 		
-						<h1><strong>Conclusion</strong></h1>
-						<p> 
-						Odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti dolores et quas 
-						molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa. Aenean eu leo quam. 
-						Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue 
-						laboris in sit minim cupidatat ut dolor voluptate enim veniam consequat occaecat fugiat in adipisicing 
-						in amet Ut nulla nisi non ut enim aliqua laborum mollit quis nostrud sed sed.
+						<h1 class="entry_title" style="text-align: center;"><strong>Conclusion</strong></h1>
+						<p style="text-align: justify"> 
+							With our study, we can determine that “Bollywood” and “Hollywood” films are 
+							surely different. By making a first analysis on different characteristics, we 
+							see that they accumulate differences notably on their genres, actors features 
+							and runtimes. For the topics talked in movies, they have similarities but some
+							subjects are more present in Indian movies such as family or wedding, while 
+							American movies have more stories about school or parties. This analysis shows 
+							that there is a cultural difference in American and Indian cinema, while they 
+							have the same labels as the genre, for example.
+						</p>
+						
+						<p style="text-align: justify">
+							Indeed, we have seen that the genre drama the most common genre in America and 
+							India. However, in the last part of our analysis, we see that these type of movies
+							have similar topics keywords for some of the clusters, but also have their 
+							differences. Indeed, two clusters stand out for each industry. We have observed 
+							that a type of Indian drama is more focused around love, romance and relationship, 
+							whereas a type of American drama is more revolved around action with crime and 
+							violence (c.f. t-SNE results and country proportion/topic repartition on drama 
+							genre, cluster id 0 and 3). It is furthermore interesting to see that drama has
+							a lot of subgenres in it and that there is a whole spectrum of different 
+							stories within it.
+						</p>
+						
+						<p style="text-align: justify">
+							This result supports the idea that the movies industry culture of two radically
+							different countries is rather difficult to compare and quite complex, in the 
+							sense of capturing the subtle difference that lies between the two cultures.
+						</p>
+						
+						<p style="text-align: justify">
+							It is hence reducing to try to label each movies (which is, to some extension 
+							a representation of the country culture : c. f. « Movies and Culture: The Role 
+							of Films in Shaping Societal Norms and Values » by Jennifer A. Fritsche, published
+							in the Journal of Social and Political Psychology in 2016.) and have a meaningful,
+							sense-making comparison. It was important here for us to rather observe the
+							differences and to deconstruct our biases towards a different culture and try 
+							to take a step back. It was extremely fulfilling to have a critical view of how
+							the Hollywood or American heavily influences western culture 
+							(c.f. "The Americanization of European Cinemas: Hollywood's Influence on 
+							Local Film Industries" by Mark Jancovich, published in the journal Screen in 
+							2002.).
+						</p>
+						
+
+						<p style="text-align: justify">
+							In addition, we have to keep in mind the bias that we have in the dataset. 
+							Indeed, there are many more American films than Indian ones in our data, 
+							although the Indian industry is known for its large number of films produced. 
+							The only films in our data are potentially the tip of the iceberg. We also may
+							have only the famous films which is not representative of the entire Indian 
+							film culture. To support the idea of the strong influence of the American movie
+							industry, the (reducing) genre 'world cinema' shows that the genre designation 
+							of Indian films is made by Westerner.
+						</p>
+
+						<p style="text-align: justify">
+							Finally, we started this analysis by having the assumption that Bollywood, by the 
+							essence of its name, was inevitably influenced and shaped by Hollywood. Going 
+							through the analysis, learning more and more about Indian movie industry was 
+							enlightening and we realized how much this two industries can be considered as
+							entities with their own characters.
 						</p>
 
 						<blockquote>
-							<p>
+							<p style="text-align: justify">
 								Indian cinema, now a $2 billion industry, has much to offer.
 								A treasure trove of stories and songs, its films are an art form that has grown to encompass every 
 								facet of the nation's culture. From the epic historical films to the glossy masala movies, 
